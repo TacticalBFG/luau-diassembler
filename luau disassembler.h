@@ -36,6 +36,7 @@ typedef unsigned char   uint8;
 #define GetfieldAddy 0x84D460 // same thing as above
 #define LuaVmLoadAddy 0xDEADBEEF // "oldResult, moduleRef" > 2nd call below
 #define DeserializerAddy 0xDEADBEEF // LuaVM::load addy > 1st call
+#define RBX_TOP 20 // L->Top offset
 
 typedef void(__cdecl *gf)(int, int, const char*);
 gf getfield;
@@ -45,3 +46,9 @@ sf setfield;
 
 typedef int(__cdecl *deserialize_)(int, int, const char*, unsigned int);
 deserialize_ deserialize;
+
+
+OpCode LuauToOp(uint8_t op);
+Proto *unconvert(int L, int p, lua_State *Ls);
+void decompileScript(std::string path);
+void pushboolean(int L, bool val);
