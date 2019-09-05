@@ -31,7 +31,7 @@ typedef unsigned char   uint8;
 
 // I'm not giving out private shit here lol, you can find this in like 20 seconds if u decompile their vm
 
-//////// UPDATE \\\\\\\\
+//////// UPDATE 
 #define SetfieldAddy 0x84F600 // also will have to change calling convention
 #define GetfieldAddy 0x84D460 // same thing as above
 #define LuaVmLoadAddy 0xDEADBEEF // "oldResult, moduleRef" > 2nd call below
