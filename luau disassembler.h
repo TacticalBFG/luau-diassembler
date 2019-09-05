@@ -52,3 +52,5 @@ OpCode LuauToOp(uint8_t op);
 Proto *unconvert(int L, int p, lua_State *Ls);
 void decompileScript(std::string path);
 void pushboolean(int L, bool val);
+
+void loadAddys(); // CALL THIS BEFORE ANYTHING ELSE
